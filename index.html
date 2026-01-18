@@ -57,25 +57,25 @@
         <h2>EV Straßwalchen</h2>
         <p>Hol dir alle Turniertermine direkt in deinen Kalender.</p>
         
-        <!-- KORREKTUR: webcal:// ist oft unzuverlässig. Wir nutzen https:// und lassen iOS die .ics-Datei erkennen. -->
-        <a href="https://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" class="button apple">iPhone (Apple Kalender )</a>
+        <!-- iPhone: Nutzt webcal über jsDelivr für direkten Abo-Dialog -->
+        <a href="webcal://cdn.jsdelivr.net/gh/EVstrass/kalender@main/Turnierplan_EV_Strasswalchen.ics" class="button apple">iPhone (Apple Kalender)</a>
         
-        <!-- KORREKTUR: Das download-Attribut ist korrekt für Android/Outlook, um den Download zu erzwingen. -->
-        <a href="https://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" download="Turnierplan_EV_Strasswalchen.ics" class="button android">Android (Outlook / Kalender )</a>
+        <!-- Android/Outlook: Erzwingt Download durch korrekten MIME-Type via jsDelivr -->
+        <a href="https://cdn.jsdelivr.net/gh/EVstrass/kalender@main/Turnierplan_EV_Strasswalchen.ics" download="Turnierplan.ics" class="button android">Android (Outlook / Kalender )</a>
 
         <hr>
         
-        <!-- KORREKTUR: Der Link muss auf calendar.google.com zeigen, um die Abonnement-Funktion zu nutzen. -->
-        <a href="https://calendar.google.com/calendar/render?cid=https://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" target="_blank" class="button google">In Google Kalender (Web )</a>
+        <!-- Google: Nutzt die offizielle Import-Schnittstelle -->
+        <a href="https://www.google.com/calendar/render?cid=https://cdn.jsdelivr.net/gh/EVstrass/kalender@main/Turnierplan_EV_Strasswalchen.ics" target="_blank" class="button google">In Google Kalender (Web )</a>
 
         <div class="info">
             <strong>So funktioniert's:</strong>  
 
-            • <strong>iPhone:</strong> Button klicken und "Abonnieren" wählen.  
+            • <strong>iPhone:</strong> Klicken und "Abonnieren" wählen.  
 
-            • <strong>Android:</strong> Button klicken, Datei herunterladen, dann auf "Öffnen" tippen und deine Kalender-App wählen.  
+            • <strong>Android/Outlook:</strong> Datei herunterladen und mit Kalender-App öffnen.  
 
-            • <strong>Google:</strong> Im Browser anmelden und "Hinzufügen" wählen.
+            • <strong>Google:</strong> "Hinzufügen" im erscheinenden Fenster bestätigen.
         </div>
     </div>
 
