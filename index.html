@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EV Straßwalchen Turnierplan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; }
-        .button { display: block; width: 80%; margin: 20px auto; padding: 15px; 
-                  background: #007bff; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
-        .android { background: #3ddc84; color: #073042; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding: 40px 20px; background-color: #f4f7f9; color: #333; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; margin: 0 auto; }
+        h2 { color: #004a99; margin-bottom: 10px; }
+        p { margin-bottom: 30px; line-height: 1.5; color: #666; }
+        .button { display: block; width: 100%; margin: 15px 0; padding: 18px; border-radius: 12px; font-weight: bold; text-decoration: none; font-size: 16px; transition: transform 0.2s; box-sizing: border-box; }
+        .button:active { transform: scale(0.98); }
+        .apple { background-color: #000; color: white; }
+        .outlook { background-color: #0078d4; color: white; }
+        .google { background-color: #34a853; color: white; font-size: 13px; margin-top: 25px; }
+        .info { font-size: 12px; color: #999; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h2>EV Straßwalchen</h2>
-    <p>Wähle dein Gerät, um den Turnierplan zu abonnieren:</p>
-    
-    <a href="webcal://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" class="button">iPhone / Apple Kalender</a>
-    
-    <a href="https://www.google.com/calendar/render?cid=https%3A%2F%2Fraw.githubusercontent.com%2FEVstrass%2Fkalender%2Fmain%2FTurnierplan_EV_Strasswalchen.ics%3Fv%3D1" class="button android">Android / Google Kalender</a>
+    <div class="card">
+        <h2>EV Straßwalchen</h2>
+        <p>Wähle deine App, um alle Turniertermine automatisch zu abonnieren:</p>
+        
+        <a href="webcal://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" class="button apple">iPhone (Apple Kalender)</a>
+        
+        <a href="https://raw.githubusercontent.com/EVstrass/kalender/main/Turnierplan_EV_Strasswalchen.ics" class="button outlook">Android / Outlook App</a>
 
-    <p><small>Hinweis für Android: Falls die App nicht direkt öffnet, Link lange gedrückt halten und "In neuem Tab öffnen" wählen.</small></p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        
+        <a href="https://www.google.com/calendar/render?cid=https%3A%2F%2Fraw.githubusercontent.com%2FEVstrass%2Fkalender%2Fmain%2FTurnierplan_EV_Strasswalchen.ics" class="button google">In Google Kalender (Web) hinzufügen</a>
+
+        <div class="info">
+            Tipp: Bei Android öffnet sich die Datei. Wähle dann "Öffnen mit Outlook" oder "Kalender".
+        </div>
+    </div>
 </body>
 </html>
